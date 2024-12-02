@@ -69,12 +69,11 @@ class SortingApp(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.sorting_algorithms = SortingAlgorithms()  # Инициализация класса с алгоритмами
+        self.sorting_algorithms = SortingAlgorithms()
 
-        self.setWindowTitle("Сортировка массива")
-        self.setGeometry(100, 100, 400, 300)
+        self.setWindowTitle("Тренажер сортировки")
+        self.setGeometry(100, 100, 400, 400)
 
-        # Создание виджетов
         self.layout = QVBoxLayout()
 
         self.label = QLabel("Введите массив чисел через пробел:")
@@ -100,8 +99,11 @@ class SortingApp(QWidget):
         self.sort_button.clicked.connect(self.sort_array)
         self.layout.addWidget(self.sort_button)
 
-        self.result_label = QLabel("Отсортированный массив: ")
+        self.result_label = QLabel("Отсортированный массив:")
         self.layout.addWidget(self.result_label)
+
+        self.description_label = QLabel("Описание алгоритма:")
+        self.layout.addWidget(self.description_label)
 
         self.setLayout(self.layout)
 
@@ -109,6 +111,14 @@ class SortingApp(QWidget):
         try:
             arr = list(map(int, self.entry_array.text().split()))
             sorting_mode = self.sorting_var.currentText()
+
+            descriptions = {
+                "Bubble Sort": "Пузырьковая сортировка сравнивает элементы попарно, меняя их местами, если порядок неверный.",
+                "Selection Sort": "Выбор самой маленькой величины для каждой позиции из неотсортированной части массива.",
+                "Insertion Sort": "Каждый элемент вставляется в нужное место отсортированной части массива.",
+                "Quick Sort": "Элементы делятся на две группы вокруг опорного элемента, затем сортируются рекурсивно.",
+                "Merge Sort": "Массив делится на части, сортируется и объединяется обратно."
+            }
 
             if sorting_mode == "Bubble Sort":
                 sorted_arr = self.sorting_algorithms.bubble_sort(arr.copy())
@@ -125,6 +135,7 @@ class SortingApp(QWidget):
                 return
 
             self.result_label.setText("Отсортированный массив: " + ' '.join(map(str, sorted_arr)))
+            self.description_label.setText("Описание алгоритма: " + descriptions[sorting_mode])
         except ValueError:
             QMessageBox.critical(self, "Error", "Введите массив чисел через пробел")
 
@@ -134,3 +145,4 @@ if __name__ == "__main__":
     window = SortingApp()
     window.show()
     sys.exit(app.exec())
+

@@ -16,31 +16,23 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;Квадрат&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#f4f4f4&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffaa7f;&quot;&gt;&lt;span style=&quot; font-family:'Arial,sans-serif'; font-size:10pt; font-weight:600; font-style:italic; color:#ffffff;&quot;&gt;Введите массив&lt;br /&gt;чисел через пробел&lt;/span&gt;&lt;span style=&quot; font-family:'Arial,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Введите массив  чисел через пробел</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="text">
-       <string>0 2 6  9 7 8 4 3 </string>
+       <string/>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit_2">
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;Выбор метода сортировки&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#f4f4f4&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffeee0;&quot;&gt;&lt;span style=&quot; font-family:'Roboto,sans-serif'; font-size:12pt; font-style:italic; color:#bd7e5e;&quot;&gt;Выберите метод сортировки:&lt;/span&gt;&lt;span style=&quot; font-family:'Roboto,sans-serif'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Выберите метод сортировки:</string>
       </property>
      </widget>
     </item>
@@ -84,6 +76,13 @@ p, li { white-space: pre-wrap; }
      <widget class="QLabel" name="label">
       <property name="text">
        <string>Отсортированный массив:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Описание алгоритма:</string>
       </property>
      </widget>
     </item>

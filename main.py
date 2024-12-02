@@ -3,6 +3,7 @@ from PySide6 import QtWidgets
 from window import Ui_MainWindow
 
 
+
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
