@@ -99,11 +99,11 @@ class SortingApp(QWidget):
         self.sort_button.clicked.connect(self.sort_array)
         self.layout.addWidget(self.sort_button)
 
-        self.result_label = QLabel("Отсортированный массив:")
-        self.layout.addWidget(self.result_label)
-
         self.description_label = QLabel("Описание алгоритма:")
         self.layout.addWidget(self.description_label)
+
+        self.result_label = QLabel("Отсортированный массив:")
+        self.layout.addWidget(self.result_label)
 
         self.setLayout(self.layout)
 
@@ -134,8 +134,8 @@ class SortingApp(QWidget):
                 QMessageBox.critical(self, "Error", "Выберите метод сортировки")
                 return
 
-            self.result_label.setText("Отсортированный массив: " + ' '.join(map(str, sorted_arr)))
             self.description_label.setText("Описание алгоритма: " + descriptions[sorting_mode])
+            self.result_label.setText("Отсортированный массив: " + ' '.join(map(str, sorted_arr)))
         except ValueError:
             QMessageBox.critical(self, "Error", "Введите массив чисел через пробел")
 
@@ -145,4 +145,3 @@ if __name__ == "__main__":
     window = SortingApp()
     window.show()
     sys.exit(app.exec())
-
